@@ -39,7 +39,7 @@ def blinks_detector(quit_program, blink_det, blinks_num, blink,):
 
 
 ####################################################
-    SYMULACJA_SYGNALU = True
+    SYMULACJA_SYGNALU = False
 ####################################################
     mac_adress = 'cb:3a:66:e2:04:06'
 ####################################################
@@ -83,7 +83,7 @@ if __name__ == "__main__":
     # 初始化游戏
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    pygame.display.set_caption('飞机大战')
+    pygame.display.set_caption('cokolwiek')
 
     # 载入游戏音乐
     bullet_sound = pygame.mixer.Sound('resources/sound/bullet.wav')
