@@ -10,7 +10,7 @@ import pygame as pg
 import pandas as pd
 import filterlib as flt
 import blink as blk
-#from pyOpenBCI import OpenBCIGanglion
+from pyOpenBCI import OpenBCIGanglion
 
 
 def blinks_detector(quit_program, blink_det, blinks_num, blink,):
