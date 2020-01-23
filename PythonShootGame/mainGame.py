@@ -41,7 +41,7 @@ def blinks_detector(quit_program, blink_det, blinks_num, blink,):
 ####################################################
     SYMULACJA_SYGNALU = True
 ####################################################
-    mac_adress = 'd2:b4:11:81:48:ad'
+    mac_adress = 'cb:3a:66:e2:04:06'
 ####################################################
 
     clock = pg.time.Clock()
