@@ -244,6 +244,11 @@ if __name__ == "__main__":
                 blink2 = True
                 blink.value = 0
             player.Move(blink2)
+            
+"""
+        if key_pressed[K_SPACE]:
+            player.shoot(bullet_img)
+"""
 
 
 
