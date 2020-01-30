@@ -230,8 +230,10 @@ if __name__ == "__main__":
         key_pressed = pygame.key.get_pressed()
         # 若玩家被击中，则无效
         if not player.is_hit:
+            blink2 = False
             if blink.value == 1:
                 player.shoot(bullet_img)
+            player.Move(blink2)
 
 
 
