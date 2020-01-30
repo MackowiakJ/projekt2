@@ -25,12 +25,12 @@ def blinks_detector(quit_program, blink_det, blinks_num, blink,):
         brt.blink_detect(smp_flted, -38000)
         if brt.new_blink:
             if brt.blinks_num == 1:
-                #connected.set()
+                connected.set()
                 print('CONNECTED. Speller starts detecting blinks.')
             else:
                 blink_det.put(brt.blinks_num)
                 blinks_num.value = brt.blinks_num
-                blink.value = 0
+                blink.value = 1
 
         if quit_program.is_set():
             if not SYMULACJA_SYGNALU:
@@ -41,7 +41,7 @@ def blinks_detector(quit_program, blink_det, blinks_num, blink,):
 ####################################################
     SYMULACJA_SYGNALU = False
 ####################################################
-    mac_adress = 'cb:3a:66:e2:04:06'
+    mac_adress = 'e5:32:b4:53:55:ba'
 ####################################################
 
     clock = pg.time.Clock()
@@ -67,7 +67,7 @@ if __name__ == "__main__":
     blink_det = mp.Queue()
     blink = mp.Value('i', 0)
     blinks_num = mp.Value('i', 0)
-    #connected = mp.Event()
+    connected = mp.Event()
     quit_program = mp.Event()
 
     proc_blink_det = mp.Process(
