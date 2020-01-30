@@ -147,15 +147,6 @@ if __name__ == "__main__":
         # 控制游戏最大帧率为60
         clock.tick(45)
 
-        # 控制发射子弹频率,并发射子弹
-        if not player.is_hit:
-            if shoot_frequency % 15 == 0:
-                bullet_sound.play()
-                player.shoot(bullet_img)
-            shoot_frequency += 1
-            if shoot_frequency >= 15:
-                shoot_frequency = 0
-
         # 生成敌机
         if enemy_frequency % 50 == 0:
             enemy1_pos = [random.randint(0, SCREEN_WIDTH - enemy1_rect.width), 0]
