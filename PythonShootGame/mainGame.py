@@ -233,6 +233,7 @@ if __name__ == "__main__":
             blink2 = False
             if blink.value == 1:
                 player.shoot(bullet_img)
+                blink.value = 0
             player.Move(blink2)
 
 
