@@ -36,7 +36,7 @@ class Player(pygame.sprite.Sprite):
             self.image.append(plane_img.subsurface(player_rect[i]).convert_alpha())
         self.rect = player_rect[0]                      # 初始化图片所在的矩形
         self.rect.topleft = init_pos                    # 初始化矩形的左上角坐标
-        self.speed = 8                                  # 初始化玩家速度，这里是一个确定的值
+        self.speed = 6                                  # 初始化玩家速度，这里是一个确定的值
         self.bullets = pygame.sprite.Group()            # 玩家飞机所发射的子弹的集合
         self.img_index = 0                              # 玩家精灵图片索引
         self.is_hit = False                             # 玩家是否被击中
@@ -73,7 +73,7 @@ class Enemy(pygame.sprite.Sprite):
        self.rect = self.image.get_rect()
        self.rect.topleft = init_pos
        self.down_imgs = enemy_down_imgs
-       self.speed = 2
+       self.speed = 1
        self.down_index = 0
 
     def move(self):
