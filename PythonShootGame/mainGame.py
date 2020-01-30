@@ -30,7 +30,7 @@ def blinks_detector(quit_program, blink_det, blinks_num, blink,):
             else:
                 blink_det.put(brt.blinks_num)
                 blinks_num.value = brt.blinks_num
-                blink.value = 1
+                blink.value = 0
 
         if quit_program.is_set():
             if not SYMULACJA_SYGNALU:
